@@ -1,0 +1,227 @@
+body {
+  font-family: 'Raleway', sans-serif; 
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.layout {
+  margin: 1em;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+  "a"
+  "b"
+  "c"
+  "d";
+  grid-template-rows: 1fr 1fr 6fr 1fr;
+}
+
+.a {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 10px;
+  grid-area: a;
+  background-color: #00579C;
+  color: white;
+  width: auto;
+  text-align: center;
+}
+
+.b {
+  grid-area: b;
+  background-color: #E7E7E7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.c {
+  grid-area: c;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.d {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: d;
+  background-color: #012F6B;
+  color: #fff;
+  text-align: center;
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.header-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.rrss {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.footer-note {
+  padding: 0;
+}
+
+.product {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  padding: 10px;
+  margin-top: 15px;
+  width: 400px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.product-img {
+  background-size:cover;
+  width: 380px;
+  height: 250px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img01 {
+  background-image: url("../imgs/car-01.png");
+}
+
+
+.see-button button {
+  background-color: #00579C;
+  color: white;
+  width: 7em;
+  height: 3em;
+  border-radius: 5px;
+}
+
+.page-numbers { 
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.page-numbers a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.page-numbers a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.page-numbers a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+
+ul {
+  list-style: none;
+}
+
+.menu-item-has-children a{
+  color: white;
+}
+
+.menu {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.menu-b {
+  display: none;
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  width: 100%;
+  font-size: 1.15rem;
+  padding: 0.675em 6em 0.675em 1em;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: #000;
+  cursor: pointer;
+}
+
+@media (min-width: 576px) {
+  .layout {
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+    "a b b b b"
+    "a c c c c"
+    "a c c c c"
+    "a c c c c"
+    "d c c c c";
+    }
+  
+  .a {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .header-title {
+    padding: 0px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .catalog {
+    overflow: scroll;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul { padding: 0;}
+  }
+  
